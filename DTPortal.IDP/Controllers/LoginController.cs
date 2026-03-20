@@ -323,7 +323,10 @@ namespace DTPortal.IDP.Controllers
                     if (model.Method == "get")
                     {
                         _logger.LogDebug("<-- Login post");
-                        return Redirect(url);
+                        if (Url.IsLocalUrl(url))
+                        {
+                            return Redirect(url);
+                        }
                     }
                     else
                     {
