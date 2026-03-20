@@ -2045,10 +2045,10 @@
         window.authSchemas = @Html.Raw(JsonSerializer.Serialize(Model.AuthSchemas));
     </script>
 
-    <script type="module">
+    @* <script type="module">
         import * as UAEKYC from "/idp/icpSdk/index.js";
         window.UAEKYC = UAEKYC;
-    </script>
+    </script> *@
 
     <script>
         window.APP_CONFIG = {
